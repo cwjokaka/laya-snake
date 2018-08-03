@@ -5,27 +5,22 @@
     var Event   = Laya.Event;
     var screen = gameConfig.screen;
 
-    Laya.init(screen.WIDTH, screen.HEIGHT, WebGL);
-    Laya.stage.alignV = Stage.ALIGN_MIDDLE;
-    Laya.stage.alignH = Stage.ALIGN_MIDDLE;
-    laya.utils.Stat.show(0, 0);
-
     // 创建背景
     var bg = new Background();
     Laya.stage.addChild(bg);
     
-
-
-    var heroLink = new HeroLink({});
-    var itemBox = new Laya.Sprite();
+    var heroLink = ObjectHolder.heroLink;
+    var itemBox = ObjectHolder.itemBox;
+    var enemyBox = ObjectHolder.enemyBox;
 
     Laya.stage.addChild(heroLink);
     Laya.stage.addChild(itemBox);
+    Laya.stage.addChild(enemyBox);
 
     var hero = new Hero({dir: gameConfig.dirs.RIGHT, curX: 40, curY:40});
     var item = new Item({x: 120, y: 120});
     var itemArcher = new ItemArcher({x: 80, y: 80});
-
+    var enemy = new EnemyTower({});
 
     heroLink.addHero(hero);
     heroLink.move();
@@ -33,6 +28,7 @@
     itemBox.addChild(item);
     itemBox.addChild(itemArcher);
 
+    enemyBox.addChild(enemy);
 
     // 监听键盘输入
 	Laya.stage.on(Event.KEY_DOWN, this, onKeyDown);
@@ -82,8 +78,7 @@
                     // console.log('碰撞了');
                     // heroLink.appendHero();
                     item.pos(Math.random() * 760, Math.random() * 760);
-                    item.onHeroFound(hero, heroLink);
-
+                    item.onHeroFound(hero);
                     curHero.getItem(item);
                 }
             }

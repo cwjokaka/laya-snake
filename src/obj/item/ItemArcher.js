@@ -12,10 +12,10 @@ var ItemArcher = (function (superClass) {
     var _proto = ItemArcher.prototype;
 
     // 当被英雄碰到时触发
-    _proto.onHeroFound = function(hero, heroLink) {
+    _proto.onHeroFound = function(hero) {
         console.log('弓箭手被找到啦');
         var archer = new Archer({});
-        heroLink.addHero(archer);
+        ObjectHolder.heroLink.addHero(archer);
     }
 
 

@@ -1,14 +1,15 @@
 /*
 * 对象管理者
 */
-var objectHolder = (function () {
+var ObjectHolder = (function () {
 
-    var objectHolder = {};
+    var obj = {};
 
-    objectHolder.heroLink = new HeroLink({});
-    objectHolder.itemBox = new Laya.Sprite();
+    obj.init = function() {
+        this.heroLink = new HeroLink({});
+        this.itemBox = new Laya.Sprite();
+        this.enemyBox = new Laya.Sprite();
+    }
 
-    objectHolder.enemyBox = new Laya.Sprite();
-
-    return objectHolder;
+    return obj;
 }());

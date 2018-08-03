@@ -16,10 +16,10 @@ var Item = (function (superClass) {
 
     var _proto = Item.prototype;
     // 当被英雄碰到时触发
-    _proto.onHeroFound = function(hero, heroLink) {
+    _proto.onHeroFound = function(hero) {
         console.log('Hero被找到啦');
         var hero = new Hero({});
-        heroLink.addHero(hero);
+        ObjectHolder.heroLink.addHero(hero);
     
     }
 
