@@ -97,7 +97,7 @@
 
         // 子弹移动
         for (var i=0; i<bulletBox.numChildren; i++) {
-            // bulletBox.getChildAt(i).move();
+            bulletBox.getChildAt(i).move();
         }
 
     }

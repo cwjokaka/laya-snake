@@ -7,7 +7,7 @@ var EnemyTower = (function (superClass) {
         superClass.call(this, opts);
         
         // 射击范围
-        this.range = 100;
+        this.range = 800;
         // 攻击间隔(帧数)
         this.interval = 60;
     }
@@ -32,7 +32,7 @@ var EnemyTower = (function (superClass) {
                 var distance = Math.sqrt(Math.pow(hx - ex, 2) + Math.pow(hy - ey, 2));
                 if (distance <= this.range) {
                     console.log('进入射击范围:' + this.range);
-                    var bullet = new TowerBullet({target: curHero});
+                    var bullet = new TowerBullet({x: this.x + 20, y: this.y + 20, target: curHero});
                     ObjectHolder.bulletBox.addChild(bullet);
                     break;
                 }

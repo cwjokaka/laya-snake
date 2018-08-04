@@ -5,6 +5,11 @@ var Bullet = (function (superClass) {
     function Bullet(opts) {
         Bullet.super(this);
         this.target = opts.target || undefined;
+        this.x = opts.x || 0;
+        this.y = opts.y || 0;
+        this.pivotX = gameConfig.node.WIDTH / 2;
+        this.pivotY = gameConfig.node.WIDTH / 2;
+        this.speed = opts.speed || 1;
         // 填充颜色
         this.graphics.drawRect(gameConfig.node.WIDTH / 3 , 0, gameConfig.node.WIDTH / 3, gameConfig.node.HEIGHT, opts.color || gameConfig.node.COLOR);   
 
