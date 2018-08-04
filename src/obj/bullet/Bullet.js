@@ -9,7 +9,10 @@ var Bullet = (function (superClass) {
         this.y = opts.y || 0;
         this.pivotX = gameConfig.node.WIDTH / 2;
         this.pivotY = gameConfig.node.WIDTH / 2;
+        // 移动速度
         this.speed = opts.speed || 1;
+        // 攻击力
+        this.atk = opts.atk || 20;
         // 填充颜色
         this.graphics.drawRect(gameConfig.node.WIDTH / 3 , 0, gameConfig.node.WIDTH / 3, gameConfig.node.HEIGHT, opts.color || gameConfig.node.COLOR);   
 

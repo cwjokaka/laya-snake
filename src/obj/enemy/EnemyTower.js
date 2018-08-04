@@ -7,7 +7,7 @@ var EnemyTower = (function (superClass) {
         superClass.call(this, opts);
         
         // 射击范围
-        this.range = 800;
+        this.range = 200;
         // 攻击间隔(帧数)
         this.interval = 60;
     }

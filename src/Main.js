@@ -20,15 +20,15 @@
     Laya.stage.addChild(bulletBox);
 
     var hero = new Hero({dir: gameConfig.dirs.RIGHT, curX: 40, curY:40});
-    // var item = new Item({x: 120, y: 120});
-    // var itemArcher = new ItemArcher({x: 80, y: 80});
+    var item = new Item({x: 120, y: 120});
+    var itemArcher = new ItemArcher({x: 80, y: 80});
     var enemy = new EnemyTower({x: 160, y:160});
 
     heroLink.addHero(hero);
     heroLink.move();
 
-    // itemBox.addChild(item);
-    // itemBox.addChild(itemArcher);
+    itemBox.addChild(item);
+    itemBox.addChild(itemArcher);
 
     enemyBox.addChild(enemy);
 
@@ -86,6 +86,7 @@
                 var bullet = bulletBox.getChildAt(k);
                 if (curHero.getBounds().intersects(bullet.getBounds())) {
                     bullet.onCrash(curHero);
+                    curHero.hurt(bullet);
                 }
             }
         }

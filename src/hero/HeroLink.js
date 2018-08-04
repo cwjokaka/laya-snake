@@ -64,7 +64,8 @@ var HeroLink = (function (superClass) {
             } else {
                 this.head = undefined;
             }
-            this.removeChild(this.tail);
+            // this.removeChild(this.tail);
+            this.tail.destroy();
             this.tail = this.tail.pNode;
             this.length--;
         } else {

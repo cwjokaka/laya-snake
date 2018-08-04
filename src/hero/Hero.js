@@ -21,16 +21,27 @@ var Hero = (function(superClass){
         this.tarY = 0;
         this.pNode = opts.pNode || undefined;
         this.nNode = opts.nNode || undefined;
+        // 最大血量
+        this.maxHp = 100;
+        // 当前血量
+        this.hp = 100;
+
+        // 添加血条
+        this.bar = new Bar({y: -20});
+        this.addChild(this.bar);
         this.setBounds(new Rectangle(gameConfig.grid.PADDING, gameConfig.grid.PADDING, gameConfig.node.WIDTH - gameConfig.grid.PADDING * 2, gameConfig.node.HEIGHT - gameConfig.grid.PADDING * 2));
         // 填充颜色
         this.graphics.drawRect(0, 0, gameConfig.node.WIDTH, gameConfig.node.HEIGHT, opts.color || gameConfig.node.COLOR);   
     }
+
+    var _proto = Hero.prototype;
+
     // 攻击
-    Hero.prototype.attack = function() {
+   _proto.attack = function() {
         console.log('Hero攻击!');
     }
     // 移动
-    Hero.prototype.move = function() {
+    _proto.move = function() {
         // 方案二: 递归从最后一个节点开始移动
         // 如果不是首节点, 则移动到上一节点的位置, 否则按当前方向移动
         // 递归
@@ -74,7 +85,7 @@ var Hero = (function(superClass){
 
     }
     // 增加一个英雄,默认添加在尾部
-    Hero.prototype.addHero = function(hero) {
+    _proto.addHero = function(hero) {
         // 递归到最后一个节点
         if (this.nNode) {
             this.nNode.addHero(hero);
@@ -84,8 +95,49 @@ var Hero = (function(superClass){
         this.nNode = hero;
     }
     // 英雄获取物品
-    Hero.prototype.getItem = function(item) {
+    _proto.getItem = function(item) {
         console.log('我得到物品啦');
+    }
+    // 受伤
+    _proto.hurt = function(bullet) {
+        // console.log('我中弹啦');
+        this.hp -= bullet.atk;
+        this.bar.setPercent(this.hp / this.maxHp);
+        if(this.hp <= 0) {
+            this.die();
+        }
+    }
+    // 死亡
+    _proto.die = function() {
+        // 如果不是首节点
+        if (this.pNode) {
+            // 如果不是尾节点
+            if (this.nNode) {
+                this.pNode.nNode = this.nNode;
+                this.nNode.pNode = this.pNode;
+            } 
+            // 如果是尾节点
+            else {
+                this.pNode.nNode = undefined;
+                ObjectHolder.heroLink.tail = this.pNode;
+            }
+        } 
+        // 如果是首节点, 需要重新确立首节点, 并重新调用首节点的move方法
+        else {
+            // 如果有后驱节点
+            if (this.nNode) {
+                ObjectHolder.heroLink.head = this.nNode;
+                this.nNode.pNode = undefined;
+                Laya.Tween.to(this.nNode, {x:this.nNode.tarX, y:this.nNode.tarY}, 300, Ease.linearIn, Handler.create(this.nNode, this.nNode.move), 0, true);
+            }
+            // 没有后驱节点, 则代表当前只有一个节点
+            else {
+                ObjectHolder.heroLink.head = undefined;
+                ObjectHolder.heroLink.tail = undefined;
+            }
+        }
+        this.destroy();
+
     }
 
 

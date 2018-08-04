@@ -55,8 +55,8 @@ var TowerBullet = (function (superClass) {
             radina = Math.PI * 2 - radina;
         }
 
-        var deltaX = Math.sin(radina) * 1;
-        var deltaY = - Math.cos(radina) * 1;
+        var deltaX = Math.sin(radina) * 2;
+        var deltaY = - Math.cos(radina) * 2;
 
         this.x = this.x + deltaX;
         this.y = this.y + deltaY;
