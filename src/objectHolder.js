@@ -9,6 +9,7 @@ var ObjectHolder = (function () {
         this.heroLink = new HeroLink({});
         this.itemBox = new Laya.Sprite();
         this.enemyBox = new Laya.Sprite();
+        this.bulletBox = new Laya.Sprite();
     }
 
     return obj;

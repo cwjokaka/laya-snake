@@ -12,15 +12,17 @@
     var heroLink = ObjectHolder.heroLink;
     var itemBox = ObjectHolder.itemBox;
     var enemyBox = ObjectHolder.enemyBox;
+    var bulletBox = ObjectHolder.bulletBox;
 
     Laya.stage.addChild(heroLink);
     Laya.stage.addChild(itemBox);
     Laya.stage.addChild(enemyBox);
+    Laya.stage.addChild(bulletBox);
 
     var hero = new Hero({dir: gameConfig.dirs.RIGHT, curX: 40, curY:40});
     var item = new Item({x: 120, y: 120});
     var itemArcher = new ItemArcher({x: 80, y: 80});
-    var enemy = new EnemyTower({});
+    var enemy = new EnemyTower({x: 640, y:640});
 
     heroLink.addHero(hero);
     heroLink.move();
@@ -82,8 +84,12 @@
                     curHero.getItem(item);
                 }
             }
-
         }
+
+        for (var i=0; i<enemyBox.numChildren; i++) {
+            enemyBox.getChildAt(i).attack();
+        }
+
     }
 
     Laya.timer.frameLoop(1, this,onLoop);
