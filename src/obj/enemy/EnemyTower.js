@@ -27,7 +27,7 @@ var EnemyTower = (function (superClass) {
             var distance = Math.sqrt(Math.pow(hx - ex, 2) + Math.pow(hy - ey, 2));
             if (distance <= this.range) {
                 console.log('进入射击范围:' + this.range);
-                var bullet = new Bullet({});
+                var bullet = new TowerBullet({});
                 ObjectHolder.bulletBox.addChild(bullet);
                 break;
             }

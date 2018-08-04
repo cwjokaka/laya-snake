@@ -90,6 +90,10 @@
             enemyBox.getChildAt(i).attack();
         }
 
+        for (var i=0; i<bulletBox.numChildren; i++) {
+            bulletBox.getChildAt(i).move();
+        }
+
     }
 
     Laya.timer.frameLoop(1, this,onLoop);
