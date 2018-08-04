@@ -20,15 +20,15 @@
     Laya.stage.addChild(bulletBox);
 
     var hero = new Hero({dir: gameConfig.dirs.RIGHT, curX: 40, curY:40});
-    var item = new Item({x: 120, y: 120});
-    var itemArcher = new ItemArcher({x: 80, y: 80});
-    var enemy = new EnemyTower({x: 640, y:640});
+    // var item = new Item({x: 120, y: 120});
+    // var itemArcher = new ItemArcher({x: 80, y: 80});
+    var enemy = new EnemyTower({x: 160, y:160});
 
     heroLink.addHero(hero);
     heroLink.move();
 
-    itemBox.addChild(item);
-    itemBox.addChild(itemArcher);
+    // itemBox.addChild(item);
+    // itemBox.addChild(itemArcher);
 
     enemyBox.addChild(enemy);
 
@@ -71,27 +71,33 @@
 
     // 游戏循环函数
     function onLoop() {
-        // console.log(hero.x, hero.y, hero.curX, hero.curY, hero.tarX, hero.tarY);
+        // 碰撞检测
         for (var i=0; i<heroLink.numChildren; i++) {
             var curHero = heroLink.getChildAt(i);
             for (var j=0; j<itemBox.numChildren; j++) {
                 var item = itemBox.getChildAt(j);
                 if (curHero.getBounds().intersects(item.getBounds())) {
-                    // console.log('碰撞了');
-                    // heroLink.appendHero();
                     item.pos(Math.random() * 760, Math.random() * 760);
                     item.onHeroFound(hero);
                     curHero.getItem(item);
                 }
             }
+            for (var k=0; k<bulletBox.numChildren; k++) {
+                var bullet = bulletBox.getChildAt(k);
+                if (curHero.getBounds().intersects(bullet.getBounds())) {
+                    bullet.onCrash(curHero);
+                }
+            }
         }
 
+        // 敌人攻击
         for (var i=0; i<enemyBox.numChildren; i++) {
             enemyBox.getChildAt(i).attack();
         }
 
+        // 子弹移动
         for (var i=0; i<bulletBox.numChildren; i++) {
-            bulletBox.getChildAt(i).move();
+            // bulletBox.getChildAt(i).move();
         }
 
     }

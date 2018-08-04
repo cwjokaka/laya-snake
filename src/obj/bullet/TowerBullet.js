@@ -10,15 +10,15 @@ var TowerBullet = (function (superClass) {
     Laya.class(TowerBullet, 'bullet', superClass);
 
     var _proto = Bullet.prototype;
-    
+
     _proto.move = function() {
-        if (!this.target) {
-            
-        }
-        var heroLink = ObjectHolder.HeroLink;
-        console.log('子弹移动');
+        console.log('塔子弹移动');
     }
 
+    _proto.onCrash = function(hero) {
+        console.log('撞上了');
+        this.destroy();
+    }
 
     return TowerBullet;
 }(Bullet));

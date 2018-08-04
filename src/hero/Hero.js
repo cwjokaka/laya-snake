@@ -45,7 +45,7 @@ var Hero = (function(superClass){
             this.tarX = this.pNode.tarX;
             this.tarY = this.pNode.tarY;
             // console.log('子节点移动target: x' +this.tarPos.x+ ' y'+this.tarPos.y);
-            Laya.Tween.to(this, {x:this.tarX, y:this.tarY}, 200, Ease.linearIn, null, 0, true);
+            Laya.Tween.to(this, {x:this.tarX, y:this.tarY}, 300, Ease.linearIn, null, 0, true);
         } 
         // 如果是首节点
         else {
@@ -66,7 +66,7 @@ var Hero = (function(superClass){
                     break;
             }
             // console.log('首节点移动target: x' +this.tarPos.x+ ' y'+this.tarPos.y);
-            Laya.Tween.to(this, {x: this.tarX, y: this.tarY}, 200,  Ease.linearIn, Handler.create(this, this.move), 0, true);
+            Laya.Tween.to(this, {x: this.tarX, y: this.tarY}, 300, Ease.linearIn, Handler.create(this, this.move), 0, true);
             if (this.nNode) {
                 // console.log('nNode: x' + this.nNode.tarX + ' y' + this.nNode.tarY );
             }
