@@ -7,6 +7,8 @@ var Enemy = (function (superClass) {
         Enemy.super(this);
         this.x = opts.x || 0;
         this.y = opts.y || 0;
+        this.maxHp = opts.maxHp;
+        this.hp = opts.hp;
         this.graphics.drawRect(0, 0, gameConfig.node.WIDTH, gameConfig.node.HEIGHT, opts.color || 'green');   
     }
     Laya.class(Enemy, 'enemy', superClass);

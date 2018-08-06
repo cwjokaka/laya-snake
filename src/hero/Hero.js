@@ -29,6 +29,8 @@ var Hero = (function(superClass){
         // 添加血条
         this.bar = new Bar({y: -20});
         this.addChild(this.bar);
+        // ObjectHolder.barBox.addChild(this.bar);
+
         this.setBounds(new Rectangle(gameConfig.grid.PADDING, gameConfig.grid.PADDING, gameConfig.node.WIDTH - gameConfig.grid.PADDING * 2, gameConfig.node.HEIGHT - gameConfig.grid.PADDING * 2));
         // 填充颜色
         this.graphics.drawRect(0, 0, gameConfig.node.WIDTH, gameConfig.node.HEIGHT, opts.color || gameConfig.node.COLOR);   
@@ -98,14 +100,16 @@ var Hero = (function(superClass){
     _proto.getItem = function(item) {
         console.log('我得到物品啦');
     }
-    // 受伤
+    // 受伤, 返回是否死亡
     _proto.hurt = function(bullet) {
         // console.log('我中弹啦');
         this.hp -= bullet.atk;
         this.bar.setPercent(this.hp / this.maxHp);
         if(this.hp <= 0) {
             this.die();
+            return true;
         }
+        return false;
     }
     // 死亡
     _proto.die = function() {

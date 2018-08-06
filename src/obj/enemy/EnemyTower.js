@@ -9,7 +9,7 @@ var EnemyTower = (function (superClass) {
         // 射击范围
         this.range = 200;
         // 攻击间隔(帧数)
-        this.interval = 60;
+        this.interval = 10;
     }
 
     Laya.class(EnemyTower, 'enemyTower', superClass);

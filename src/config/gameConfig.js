@@ -3,6 +3,7 @@
 */
 var gameConfig;
 (function (gameConfig) {
+    var self = gameConfig;
     // 屏幕背景
     gameConfig.screen = {
         WIDTH : 800,

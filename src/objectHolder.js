@@ -10,6 +10,7 @@ var ObjectHolder = (function () {
         this.itemBox = new Laya.Sprite();
         this.enemyBox = new Laya.Sprite();
         this.bulletBox = new Laya.Sprite();
+        this.barBox = new Laya.Sprite();
     }
 
     return obj;

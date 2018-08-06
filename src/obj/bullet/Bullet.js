@@ -2,6 +2,9 @@
 * name;
 */
 var Bullet = (function (superClass) {
+    
+    var Rectangle = laya.maths.Rectangle;
+
     function Bullet(opts) {
         Bullet.super(this);
         this.target = opts.target || undefined;
@@ -15,7 +18,8 @@ var Bullet = (function (superClass) {
         this.atk = opts.atk || 20;
         // 填充颜色
         this.graphics.drawRect(gameConfig.node.WIDTH / 3 , 0, gameConfig.node.WIDTH / 3, gameConfig.node.HEIGHT, opts.color || gameConfig.node.COLOR);   
-
+        // 添加边界
+        this.setBounds(new Rectangle(gameConfig.node.WIDTH / 3, 0, gameConfig.node.WIDTH / 3, gameConfig.node.HEIGHT));
     }
 
     Laya.class(Bullet, 'bullet', superClass);

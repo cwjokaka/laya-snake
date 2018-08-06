@@ -10,11 +10,12 @@ var Bar = (function (superClass) {
         this.y = opts.y || 0;
         this.border = opts.border || 2;
         this.maxWidth = opts.maxWidth || gameConfig.node.WIDTH;
+        this.color = opts.color || 'red';
         // this.zOrder = opts.zOrder || 2;
         // 填充颜色(底层)
-        this.graphics.drawRect(-this.border, -this.border, this.maxWidth + this.border * 2, 5 + this.border * 2, opts.color || 'white');  
+        this.graphics.drawRect(-this.border, -this.border, this.maxWidth + this.border * 2, 5 + this.border * 2, 'white');  
         // 填充颜色(上层)
-        this.graphics.drawRect(0, 0, gameConfig.node.WIDTH, 5, opts.color || 'red');  
+        this.graphics.drawRect(0, 0, gameConfig.node.WIDTH, 5, this.color);  
 
     }
     Laya.class(Bar, 'bar', superClass);
@@ -27,8 +28,7 @@ var Bar = (function (superClass) {
         // 填充颜色(底层)
         this.graphics.drawRect(-this.border, -this.border, this.maxWidth + this.border * 2, 5 + this.border * 2, 'white');  
         // 填充颜色(上层)
-        this.graphics.drawRect(0, 0, width, 5, 'red');  
-
+        this.graphics.drawRect(0, 0, width, 5, this.color);  
     }
 
     return Bar;

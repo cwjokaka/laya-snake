@@ -100,8 +100,10 @@ var HeroLink = (function (superClass) {
     },
     // 改变方向
     _proto.changeDir = function(dir) {
-        this.dir = dir;
-        this.head.dir = dir;
+        if (this.head) {
+            this.dir = dir;
+            this.head.dir = dir;
+        }
     }
 
     // 获取物品
