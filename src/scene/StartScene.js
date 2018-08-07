@@ -23,6 +23,7 @@ var StartScene = (function(superClass) {
 		Laya.stage.alignV = Stage.ALIGN_MIDDLE;
 		Laya.stage.alignH = Stage.ALIGN_CENTER;
 
+
         var button = new laya.ui.Button(null, '开始游戏');
 
         this.addChild(button);
