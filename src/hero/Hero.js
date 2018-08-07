@@ -21,15 +21,15 @@ var Hero = (function(superClass){
         this.tarY = 0;
         this.pNode = opts.pNode || undefined;
         this.nNode = opts.nNode || undefined;
+        this.moveTween = undefined;
         // 最大血量
         this.maxHp = 100;
         // 当前血量
         this.hp = 100;
-
         // 添加血条
-        this.bar = new Bar({y: -20});
-        this.addChild(this.bar);
-        // ObjectHolder.barBox.addChild(this.bar);
+        this.bar = new Bar({bindObj: this});
+        // this.addChild(this.bar);
+        ObjectHolder.barBox.addChild(this.bar);
 
         this.setBounds(new Rectangle(gameConfig.grid.PADDING, gameConfig.grid.PADDING, gameConfig.node.WIDTH - gameConfig.grid.PADDING * 2, gameConfig.node.HEIGHT - gameConfig.grid.PADDING * 2));
         // 填充颜色
@@ -39,7 +39,7 @@ var Hero = (function(superClass){
     var _proto = Hero.prototype;
 
     // 攻击
-   _proto.attack = function() {
+    _proto.attack = function() {
         console.log('Hero攻击!');
     }
     // 移动
@@ -58,7 +58,7 @@ var Hero = (function(superClass){
             this.tarX = this.pNode.tarX;
             this.tarY = this.pNode.tarY;
             // console.log('子节点移动target: x' +this.tarPos.x+ ' y'+this.tarPos.y);
-            Laya.Tween.to(this, {x:this.tarX, y:this.tarY}, 300, Ease.linearIn, null, 0, true);
+            this.moveTween = Laya.Tween.to(this, {x:this.tarX, y:this.tarY}, 300, Ease.linearIn, null, 0, true);
         } 
         // 如果是首节点
         else {
@@ -79,10 +79,7 @@ var Hero = (function(superClass){
                     break;
             }
             // console.log('首节点移动target: x' +this.tarPos.x+ ' y'+this.tarPos.y);
-            Laya.Tween.to(this, {x: this.tarX, y: this.tarY}, 300, Ease.linearIn, Handler.create(this, this.move), 0, true);
-            if (this.nNode) {
-                // console.log('nNode: x' + this.nNode.tarX + ' y' + this.nNode.tarY );
-            }
+            this.moveTween = Laya.Tween.to(this, {x: this.tarX, y: this.tarY}, 300, Ease.linearIn, Handler.create(this, this.move), 0, true);
         }        
 
     }
@@ -93,6 +90,12 @@ var Hero = (function(superClass){
             this.nNode.addHero(hero);
             return;
         }
+        hero.pos(this.x, this.y);
+        hero.curX = this.x;
+        hero.curY = this.y;
+        hero.tarX = this.x;
+        hero.tarY = this.y;
+
         hero.pNode = this;
         this.nNode = hero;
     }
@@ -140,6 +143,7 @@ var Hero = (function(superClass){
                 ObjectHolder.heroLink.tail = undefined;
             }
         }
+        this.bar.destroy();
         this.destroy();
 
     }

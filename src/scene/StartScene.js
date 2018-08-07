@@ -7,10 +7,21 @@ var StartScene = (function(superClass) {
 
     function StartScene(opts) {
         StartScene.super(this);
+        //注册按钮点击事件，点击后开始游戏
+        this.startBtn.on(Laya.Event.CLICK,this,this.onStartBtnClick);
+
     }
     Laya.class(StartScene, 'startScene', superClass);
 
     var _proto = StartScene.prototype;
+
+    _proto.onStartBtnClick = function(e){
+        e.stopPropagation();
+        ObjectHolder.init();
+        var playScene = new PlayScene() 
+        stage.replaceChild(playScene, this);
+        playScene.init();
+    }
 
 
     _proto.init = function() {
@@ -46,4 +57,4 @@ var StartScene = (function(superClass) {
 
     return StartScene;
 
-})(Laya.Sprite);
+})(ui.StartUI);

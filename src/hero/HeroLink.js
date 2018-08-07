@@ -24,7 +24,6 @@ var HeroLink = (function (superClass) {
             console.log('没有首节点,不能进行移动');
         }
     }
-
     // 尾部追加
     _proto.addHero = function(hero) {
         if (this.tail) {
@@ -38,7 +37,6 @@ var HeroLink = (function (superClass) {
         this.length++;
         this.addChild(hero);
     }
-
     // 尾部追加
     _proto.appendHero = function() {
         var hero = new Hero({curX:this.tail.curX, curY:this.tail.curY});
@@ -53,8 +51,6 @@ var HeroLink = (function (superClass) {
         this.length++;
         this.addChild(hero);
     }
-
-
     // 尾部删除
     _proto.delHero = function() {
         if (this.tail) {
@@ -72,7 +68,6 @@ var HeroLink = (function (superClass) {
             console.log('没有尾节点,不能再进行删除');
         }
     }
-
     // 删除某个节点
     _proto.removeHero = function(hero) {
         var node = this.head;
@@ -105,12 +100,30 @@ var HeroLink = (function (superClass) {
             this.head.dir = dir;
         }
     }
-
     // 获取物品
     _proto.getItem = function(item) {
         
     }
-
+    // 停止移动
+    _proto.pause = function() {
+        var node = this.head;
+        if (node && node.moveTween) {
+            node.moveTween.pause();
+            while(node = node.nNode) {
+                node.moveTween.pause();
+            }
+        }
+    }
+    // 恢复移动
+    _proto.resume = function() {
+        var node = this.head;
+        if (node && node.moveTween) {
+            node.moveTween.resume();
+            while(node = node.nNode) {
+                node.moveTween.resume();
+            }
+        }
+    }
 
     _proto.print = function() {
         var curNode = this.head;

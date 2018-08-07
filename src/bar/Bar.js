@@ -5,17 +5,30 @@ var Bar = (function (superClass) {
 
     function Bar(opts) {
         Bar.super(this);
-        this.alpha = opts.alpha || 1;
+        this.alpha = opts.alpha || 0.5;
         this.x = opts.x || 0;
         this.y = opts.y || 0;
         this.border = opts.border || 2;
         this.maxWidth = opts.maxWidth || gameConfig.node.WIDTH;
+        this.curWidth = opts.curWidth || this.maxWidth;
         this.color = opts.color || 'red';
+        // 血条绑定的对象
+        this.bindObj = opts.bindObj;
         // this.zOrder = opts.zOrder || 2;
         // 填充颜色(底层)
         this.graphics.drawRect(-this.border, -this.border, this.maxWidth + this.border * 2, 5 + this.border * 2, 'white');  
         // 填充颜色(上层)
-        this.graphics.drawRect(0, 0, gameConfig.node.WIDTH, 5, this.color);  
+        this.graphics.drawRect(0, 0, gameConfig.node.WIDTH, 5, this.color);
+        // 跟随并重绘血条
+        this.frameLoop(1, this, function(){
+            this.x = this.bindObj.x;
+            this.y = this.bindObj.y - 20;
+            this.graphics.clear();
+            // 填充颜色(底层)
+            this.graphics.drawRect(-this.border, -this.border, this.maxWidth + this.border * 2, 5 + this.border * 2, 'white');  
+            // 填充颜色(上层)
+            this.graphics.drawRect(0, 0, this.curWidth, 5, this.color);
+        });
 
     }
     Laya.class(Bar, 'bar', superClass);
@@ -24,11 +37,7 @@ var Bar = (function (superClass) {
 
     _proto.setPercent = function(num){
         var width = this.maxWidth * num;
-        this.graphics.clear();
-        // 填充颜色(底层)
-        this.graphics.drawRect(-this.border, -this.border, this.maxWidth + this.border * 2, 5 + this.border * 2, 'white');  
-        // 填充颜色(上层)
-        this.graphics.drawRect(0, 0, width, 5, this.color);  
+        Laya.Tween.to(this, {curWidth: width}, 100, Laya.Ease.bounceInOut, null, 0, true);
     }
 
     return Bar;

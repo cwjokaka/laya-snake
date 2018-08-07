@@ -6,6 +6,7 @@ var PlayScene = (function(superClass) {
 
     var stage = Laya.stage;
     var screen = gameConfig.screen;
+    var FSM = gameConfig.gameMainFSM;
 
     function PlayScene(opts) {
         PlayScene.super(this);
@@ -17,24 +18,22 @@ var PlayScene = (function(superClass) {
     _proto.init = function() {
 
         var self = this;
-        this.isEnd = false;
+        this.state = FSM.PLAY;
 
         // 创建背景
-        var bg = new Background();
-        var heroLink = ObjectHolder.heroLink;
-        var itemBox = ObjectHolder.itemBox;
-        var enemyBox = ObjectHolder.enemyBox;
-        var bulletBox = ObjectHolder.bulletBox;
-        var barBox = ObjectHolder.barBox;
+        this.bg = new Background();
+        this.heroLink = ObjectHolder.heroLink;
+        this.itemBox = ObjectHolder.itemBox;
+        this.enemyBox = ObjectHolder.enemyBox;
+        this.bulletBox = ObjectHolder.bulletBox;
+        this.barBox = ObjectHolder.barBox;
 
-
-
-        this.addChild(bg);
-        this.addChild(heroLink);
-        this.addChild(itemBox);
-        this.addChild(enemyBox);
-        this.addChild(bulletBox);
-        this.addChild(barBox);
+        this.addChild(this.bg);
+        this.addChild(this.heroLink);
+        this.addChild(this.itemBox);
+        this.addChild(this.enemyBox);
+        this.addChild(this.bulletBox);
+        this.addChild(this.barBox);
         // this.addChild(button);
 
         var hero = new Hero({dir: gameConfig.dirs.RIGHT, curX: 40, curY:40});
@@ -42,106 +41,113 @@ var PlayScene = (function(superClass) {
         var itemArcher = new ItemArcher({x: 80, y: 80});
         var enemy = new EnemyTower({x: 160, y:160});
 
-        heroLink.addHero(hero);
-        heroLink.move();
+        this.heroLink.addHero(hero);
+        this.heroLink.move();
 
-        itemBox.addChild(item);
-        itemBox.addChild(itemArcher);
+        this.itemBox.addChild(item);
+        this.itemBox.addChild(itemArcher);
 
-        enemyBox.addChild(enemy);
+        this.enemyBox.addChild(enemy);
 
         // 监听键盘输入
         Laya.stage.on(Event.KEY_DOWN, this, onKeyDown);
 
         function onKeyDown(e) {
-            // console.log(e.keyCode);
+            console.log(e.keyCode);
             switch(e.keyCode) {
                 case 38:
-                    heroLink.changeDir(gameConfig.dirs.UP);
+                    self.heroLink.changeDir(gameConfig.dirs.UP);
                     break;
                 case 40:
-                    heroLink.changeDir(gameConfig.dirs.DOWN);
+                    self.heroLink.changeDir(gameConfig.dirs.DOWN);
                     break;
                 case 37:
-                    heroLink.changeDir(gameConfig.dirs.LEFT);
+                    self.heroLink.changeDir(gameConfig.dirs.LEFT);
                     break;
                 case 39:
-                    heroLink.changeDir(gameConfig.dirs.RIGHT);
+                    self.heroLink.changeDir(gameConfig.dirs.RIGHT);
                     break;
-                // 空格
-                case 32:
-                    var newHero = new Hero({dir: gameConfig.dirs.RIGHT, curX: 80, curY: 80});
-                    heroLink.addHero(newHero);
-                    // hero.dir = gameConfig.dirs.RIGHT;
-                    break;
-                // x
-                case 88:
-                    heroLink.delHero();
-                    // hero.dir = gameConfig.dirs.RIGHT;
-                    break;
-                // z 删除首节点
-                case 90:
-                    heroLink.removeHero(hero);
-                    break;
-
-            }
-        }
-
-        // 游戏循环函数
-        function onLoop() {
-            // 碰撞检测
-            for (var i=0; i<heroLink.numChildren; i++) {
-                var curHero = heroLink.getChildAt(i);
-                for (var j=0; j<itemBox.numChildren; j++) {
-                    var item = itemBox.getChildAt(j);
-                    if (curHero.getBounds().intersects(item.getBounds())) {
-                        item.pos(Math.random() * 760, Math.random() * 760);
-                        item.onHeroFound(hero);
-                        curHero.getItem(item);
+                // p 暂停 && 恢复
+                case 80:
+                    if(self.state == FSM.PLAY) {
+                        // 暂停
+                        self.pause();
+                    } else if (self.state == FSM.PAUSE) {
+                        self.resume();
                     }
-                }
-                for (var k=0; k<bulletBox.numChildren; k++) {
-                    var bullet = bulletBox.getChildAt(k);
-                    if (curHero.getBounds().intersects(bullet.getBounds())) {
-                        bullet.onCrash(curHero);
-                        if (curHero.hurt(bullet)) {
-                            if (!curHero.pNode && !curHero.nNode){
-                                self.isEnd = true;
-                            }
-                            break;
-                        }
-                    }
-                }
             }
-
-            // 敌人攻击
-            for (var i=0; i<enemyBox.numChildren; i++) {
-                enemyBox.getChildAt(i).attack();
-            }
-
-            // 子弹移动
-            for (var i=0; i<bulletBox.numChildren; i++) {
-                bulletBox.getChildAt(i).move();
-            }
-
-
-            if (self.isEnd) {
-                var endScene = new EndScene(); 
-                ObjectHolder.init();
-                endScene.init();
-                stage.replaceChild(endScene, self);
-                Laya.timer.clear(self,onLoop);
-                // Laya.timer.clearAll(self);
-                self.destroy(true);
-
-            }
-
         }
 
 
         // 开始游戏循环
-        Laya.timer.frameLoop(1, this, onLoop);
+        Laya.timer.frameLoop(1, this, this.onLoop);
     }
+
+    // 游戏循环
+    _proto.onLoop = function() {
+        // 碰撞检测
+        for (var i=0; i<this.heroLink.numChildren; i++) {
+            var curHero = this.heroLink.getChildAt(i);
+            for (var j=0; j<this.itemBox.numChildren; j++) {
+                var item = this.itemBox.getChildAt(j);
+                if (curHero.getBounds().intersects(item.getBounds())) {
+                    item.pos(Math.random() * 760, Math.random() * 760);
+                    item.onHeroFound(hero);
+                    curHero.getItem(item);
+                }
+            }
+            for (var k=0; k<this.bulletBox.numChildren; k++) {
+                var bullet = this.bulletBox.getChildAt(k);
+                if (curHero.getBounds().intersects(bullet.getBounds())) {
+                    bullet.onCrash(curHero);
+                    if (curHero.hurt(bullet)) {
+                        if (!curHero.pNode && !curHero.nNode){
+                            this.state = FSM.END;
+                        }
+                        break;
+                    }
+                }
+            }
+        }
+
+        // 敌人攻击
+        for (var i=0; i<this.enemyBox.numChildren; i++) {
+            this.enemyBox.getChildAt(i).attack();
+        }
+
+        // 子弹移动
+        for (var i=0; i<this.bulletBox.numChildren; i++) {
+            this.bulletBox.getChildAt(i).move();
+        }
+
+        // 游戏结束
+        if (this.state == FSM.END) {
+            var endScene = new EndScene(); 
+            ObjectHolder.init();
+            endScene.init();
+            stage.replaceChild(endScene, this);
+            Laya.timer.clear(this, this.onLoop);
+            // Laya.timer.clearAll(self);
+            this.destroy(true);
+        }
+
+    }
+    // 游戏暂停函数
+    _proto.pause = function() {
+        console.log('游戏暂停');
+        Laya.timer.clear(this, this.onLoop);
+        this.heroLink.pause();
+        this.state = FSM.PAUSE;
+    }
+    // 游戏恢复函数
+    _proto.resume = function() {
+        console.log('游戏恢复');
+        this.state = FSM.PLAY;
+        this.heroLink.resume();
+        // 开始游戏循环
+        Laya.timer.frameLoop(1, this, this.onLoop);
+    }
+
 
     return PlayScene;
 

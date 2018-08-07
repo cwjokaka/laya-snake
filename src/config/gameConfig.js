@@ -31,5 +31,12 @@ var gameConfig;
         LEFT: 2,
         RIGHT: 3
     };
+    // 游戏状态机
+    gameConfig.gameMainFSM = {
+        READY: 0,
+        START: 1,
+        PAUSE: 2,
+        END: 3
+    };
 
 })(gameConfig || (gameConfig = {}));

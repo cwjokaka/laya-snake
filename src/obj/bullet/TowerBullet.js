@@ -4,16 +4,14 @@
 var TowerBullet = (function (superClass) {
     function TowerBullet(opts) {
         opts.color = 'black';
-        
         superClass.call(this, opts);
     }
 
-    Laya.class(TowerBullet, 'bullet', superClass);
+    Laya.class(TowerBullet, 'towerBullet', superClass);
 
     var _proto = Bullet.prototype;
 
     _proto.move = function() {
-        console.log('塔子弹移动');
         var targetX = this.target.x + gameConfig.grid.WIDTH / 2;
         var targetY = this.target.y + gameConfig.grid.HEIGHT / 2;
 
@@ -23,7 +21,7 @@ var TowerBullet = (function (superClass) {
         var cos = y / distance;
         var radina = Math.acos(cos);                    //用反三角函数求弧度
         var angle = Math.floor(180/(Math.PI/radina));   //将弧度转换成角度
-        console.log(radina);
+        // console.log(radina);
 
         if(targetX>this.x && targetY>this.y){
             angle = 180 - angle;
