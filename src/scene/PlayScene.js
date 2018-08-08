@@ -27,14 +27,24 @@ var PlayScene = (function(superClass) {
         this.enemyBox = ObjectHolder.enemyBox;
         this.bulletBox = ObjectHolder.bulletBox;
         this.barBox = ObjectHolder.barBox;
+        // this.controlBox = new ModeKey();
+        this.view = new Laya.Sprite();
+        this.addChild(this.view);
 
-        this.addChild(this.bg);
-        this.addChild(this.heroLink);
-        this.addChild(this.itemBox);
-        this.addChild(this.enemyBox);
-        this.addChild(this.bulletBox);
-        this.addChild(this.barBox);
+        this.view.addChild(this.bg);
+        this.view.addChild(this.heroLink);
+        this.view.addChild(this.itemBox);
+        this.view.addChild(this.enemyBox);
+        this.view.addChild(this.bulletBox);
+        this.view.addChild(this.barBox);
         // this.addChild(button);
+
+        this.joyStick = new JoyStick();
+        this.joyStick.pos(120, 600);
+        this.addChild(this.joyStick);
+
+        // 摄像机
+        this.camera = new Camera2D(this.view, gameConfig.screen.WIDTH, gameConfig.screen.HEIGHT);
 
         var hero = new Hero({dir: gameConfig.dirs.RIGHT, curX: 40, curY:40});
         var item = new Item({x: 120, y: 120});
@@ -85,6 +95,7 @@ var PlayScene = (function(superClass) {
 
     // 游戏循环
     _proto.onLoop = function() {
+
         // 碰撞检测
         for (var i=0; i<this.heroLink.numChildren; i++) {
             var curHero = this.heroLink.getChildAt(i);
@@ -119,6 +130,29 @@ var PlayScene = (function(superClass) {
         for (var i=0; i<this.bulletBox.numChildren; i++) {
             this.bulletBox.getChildAt(i).move();
         }
+
+        // 查看joyStick的角度
+        var angle = this.joyStick.angle;
+        console.log(angle);
+        if (angle >= 45 && angle < 135) {
+            // 向上
+            this.heroLink.changeDir(gameConfig.dirs.UP);
+        }
+        else if (angle >= 135 && angle < 225) {
+            // 向右
+            this.heroLink.changeDir(gameConfig.dirs.RIGHT);
+        }
+        else if (angle >= 225 && angle < 315) {
+            // 向下
+            this.heroLink.changeDir(gameConfig.dirs.DOWN);
+        }
+        else if ((angle >= 315 && angle <= 360) || (angle >= 0 && angle < 45)) {
+            // 向左
+            this.heroLink.changeDir(gameConfig.dirs.LEFT);
+        }
+
+        // 摄像机锁定
+        this.camera.scrollTo(this.heroLink.head.x, this.heroLink.head.y);
 
         // 游戏结束
         if (this.state == FSM.END) {

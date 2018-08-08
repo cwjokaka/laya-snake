@@ -6,12 +6,6 @@
     
     stage.addChild(startScene);
     startScene.init();
-
-
-    // setTimeout(function(){
-    //     stage.replaceChild(playScene, startScene);
-    //     playScene.init();
-    // }, 2000);
-
+    
 
 })();
