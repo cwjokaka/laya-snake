@@ -19,16 +19,8 @@ var Bar = (function (superClass) {
         this.graphics.drawRect(-this.border, -this.border, this.maxWidth + this.border * 2, 5 + this.border * 2, 'white');  
         // 填充颜色(上层)
         this.graphics.drawRect(0, 0, gameConfig.node.WIDTH, 5, this.color);
-        // 跟随并重绘血条
-        this.frameLoop(1, this, function(){
-            this.x = this.bindObj.x;
-            this.y = this.bindObj.y - 20;
-            this.graphics.clear();
-            // 填充颜色(底层)
-            this.graphics.drawRect(-this.border, -this.border, this.maxWidth + this.border * 2, 5 + this.border * 2, 'white');  
-            // 填充颜色(上层)
-            this.graphics.drawRect(0, 0, this.curWidth, 5, this.color);
-        });
+        // this.frameLoop(1, this, function(){
+        // });
 
     }
     Laya.class(Bar, 'bar', superClass);
@@ -38,6 +30,17 @@ var Bar = (function (superClass) {
     _proto.setPercent = function(num){
         var width = this.maxWidth * num;
         Laya.Tween.to(this, {curWidth: width}, 100, Laya.Ease.bounceInOut, null, 0, true);
+    }
+
+    // 跟随并重绘血条
+    _proto.follow = function() {
+            this.x = this.bindObj.x;
+            this.y = this.bindObj.y - 20;
+            this.graphics.clear();
+            // 填充颜色(底层)
+            this.graphics.drawRect(-this.border, -this.border, this.maxWidth + this.border * 2, 5 + this.border * 2, 'white');  
+            // 填充颜色(上层)
+            this.graphics.drawRect(0, 0, this.curWidth, 5, this.color);
     }
 
     return Bar;

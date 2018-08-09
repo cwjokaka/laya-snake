@@ -109,7 +109,7 @@ var HeroLink = (function (superClass) {
         var node = this.head;
         if (node && node.moveTween) {
             node.moveTween.pause();
-            while(node = node.nNode) {
+            while((node = node.nNode) && node.moveTween) {
                 node.moveTween.pause();
             }
         }
@@ -119,7 +119,7 @@ var HeroLink = (function (superClass) {
         var node = this.head;
         if (node && node.moveTween) {
             node.moveTween.resume();
-            while(node = node.nNode) {
+            while((node = node.nNode) && node.moveTween) {
                 node.moveTween.resume();
             }
         }

@@ -59,6 +59,7 @@ var JoyStick = (function(superClass){
         this.isUp = false;
         this.isMove = false;
         this.isMode = "stop";
+        this.angle = undefined;
         //移除弹起和移动事件
         this.stage.off(Laya.Event.MOUSE_UP, this, this.upFun);
         this.stage.off(Laya.Event.MOUSE_MOVE, this, this.moveFun);

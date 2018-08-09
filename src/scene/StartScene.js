@@ -33,12 +33,12 @@ var StartScene = (function(superClass) {
 		Laya.stage.bgColor = "#232628";
 		Laya.stage.alignV = Stage.ALIGN_MIDDLE;
 		Laya.stage.alignH = Stage.ALIGN_CENTER;
-
+        
 
         var button = new laya.ui.Button(null, '开始游戏');
 
         this.addChild(button);
-        button.pos(400, 400);
+        button.pos(Laya.stage.width / 2, Laya.stage.height / 2);
         button.width = 200;
         button.height = 100;
         button.pivot(100, 50);
