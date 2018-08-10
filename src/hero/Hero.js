@@ -12,7 +12,9 @@ var Hero = (function(superClass){
 
     // 初始化
     Hero.prototype.init = function(opts) {
-        this.dir = opts.dir || gameConfig.grid.RIGHT;
+        this.dir = opts.dir || gameConfig.dirs.RIGHT;
+        // 到达目的地时进行dir = rdir
+        this.rdir = gameConfig.dirs.RIGHT;
         this.curX = opts.curX || 0;
         this.curY = opts.curY || 0;
         this.x = this.curX;
@@ -53,6 +55,7 @@ var Hero = (function(superClass){
         // 如果不是首节点
         if (this.pNode) {
             this.dir = this.pNode.dir;
+            this.rdir = this.pNode.rdir;
             this.curX = this.tarX;
             this.curY = this.tarY;
             this.tarX = this.pNode.tarX;
@@ -64,6 +67,7 @@ var Hero = (function(superClass){
         else {
             this.curX = this.tarX;
             this.curY = this.tarY;
+            this.dir = this.rdir;
             switch(this.dir) {
                 case gameConfig.dirs.UP:
                     this.tarY = this.curY - gameConfig.grid.WIDTH;

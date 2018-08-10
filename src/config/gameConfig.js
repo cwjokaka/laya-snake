@@ -4,12 +4,6 @@
 var gameConfig;
 (function (gameConfig) {
     var self = gameConfig;
-    // 屏幕背景
-    gameConfig.screen = {
-        WIDTH : 960,
-        HEIGHT : 960,
-        COLOR : '#FFCC66'
-    };
     // 格子
     gameConfig.grid = {
         WIDTH : 60,
@@ -18,6 +12,14 @@ var gameConfig;
         BORDER_WIDTH: 2,
         PADDING: 1      // 单元格碰撞体型修正, 如果为0, 相邻的格子也会发生碰撞
     };
+
+    // 屏幕背景
+    gameConfig.screen = {
+        WIDTH : self.grid.WIDTH * 16,
+        HEIGHT : self.grid.HEIGHT * 16,
+        COLOR : '#FFCC66'
+    };
+
     // 节点
     gameConfig.node = {
         WIDTH : 60,
@@ -26,10 +28,10 @@ var gameConfig;
     };
     // 方向枚举
     gameConfig.dirs = {
-        UP: 0,
-        DOWN: 1,
+        UP: 1,
+        DOWN: -1,
         LEFT: 2,
-        RIGHT: 3
+        RIGHT: -2
     };
     // 游戏状态机
     gameConfig.gameMainFSM = {

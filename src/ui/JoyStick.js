@@ -4,14 +4,14 @@ var JoyStick = (function(superClass){
         JoyStick.super(this);
         //大圆
         this.moveMax = new Laya.Sprite();
-        this.moveMax.size(160, 160);
+        this.moveMax.size(320, 320);
         // this.moveMax.pivot(60, 60);
-        this.moveMax.graphics.drawCircle(40, 40, 80, 'white', 'black', 2);
+        this.moveMax.graphics.drawCircle(80, 80, 160, 'white', 'black', 2);
         //小圆点
         this.moveKey = new Laya.Sprite();
-        this.moveKey.size(80, 80);
+        this.moveKey.size(160, 160);
         // this.moveKey.pivot(20, 20);
-        this.moveKey.graphics.drawCircle(40, 40, 40, 'red');
+        this.moveKey.graphics.drawCircle(80, 80, 80, 'red');
         
         this.stage = stage;
         this.addChild(this.moveMax);

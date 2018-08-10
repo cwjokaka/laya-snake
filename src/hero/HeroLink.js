@@ -96,8 +96,15 @@ var HeroLink = (function (superClass) {
     // 改变方向
     _proto.changeDir = function(dir) {
         if (this.head) {
+            var cDir = this.head.dir;
+            // 如果是相反方向,则变更方向无效
+            if (cDir + dir == 0) {
+                console.log('方向变更无效');
+                return;
+            }
             this.dir = dir;
-            this.head.dir = dir;
+            // this.head.dir = dir;
+            this.head.rdir = dir;
         }
     }
     // 获取物品

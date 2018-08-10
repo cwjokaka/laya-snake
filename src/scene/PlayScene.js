@@ -43,11 +43,11 @@ var PlayScene = (function(superClass) {
         // this.addChild(button);
 
         this.joyStick = new JoyStick();
-        this.joyStick.pos(120, 600);
+        this.joyStick.pos(180, 650);
         this.addChild(this.joyStick);
 
         // 摄像机
-        this.camera = new Camera2D(this.view, gameConfig.screen.WIDTH, gameConfig.screen.HEIGHT);
+        this.camera = new Camera2D(this.view, stage.width, stage.height);
 
         var hero = new Hero({dir: gameConfig.dirs.RIGHT, curX: 40, curY:40});
         var item = new Item({x: 120, y: 120});
@@ -90,13 +90,16 @@ var PlayScene = (function(superClass) {
             }
         }
 
-
         // 开始游戏循环
         Laya.timer.frameLoop(1, this, this.onLoop);
     }
 
     // 游戏循环
     _proto.onLoop = function() {
+
+        if (this.state != FSM.PLAY){
+            return;
+        }
 
         for(var i = 0; i<this.barBox.numChildren; i++) {
             this.barBox.getChildAt(i).follow();
