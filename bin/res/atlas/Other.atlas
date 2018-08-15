@@ -1,0 +1,348 @@
+{
+    "frames": {
+        "bush.png": {
+            "frame": {
+                "h": 39,
+                "idx": 0,
+                "w": 36,
+                "x": 179,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 17,
+                "y": 31
+            }
+        },
+        "cactus.png": {
+            "frame": {
+                "h": 59,
+                "idx": 0,
+                "w": 45,
+                "x": 192,
+                "y": 183
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 13,
+                "y": 11
+            }
+        },
+        "coinBronze.png": {
+            "frame": {
+                "h": 40,
+                "idx": 0,
+                "w": 40,
+                "x": 233,
+                "y": 142
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 15,
+                "y": 18
+            }
+        },
+        "coinDiamond.png": {
+            "frame": {
+                "h": 40,
+                "idx": 0,
+                "w": 40,
+                "x": 192,
+                "y": 142
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 15,
+                "y": 18
+            }
+        },
+        "coinGold.png": {
+            "frame": {
+                "h": 40,
+                "idx": 0,
+                "w": 40,
+                "x": 151,
+                "y": 182
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 15,
+                "y": 18
+            }
+        },
+        "coinSilver.png": {
+            "frame": {
+                "h": 40,
+                "idx": 0,
+                "w": 40,
+                "x": 110,
+                "y": 182
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 15,
+                "y": 18
+            }
+        },
+        "dirt.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 110,
+                "y": 111
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "flagBlue.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 213,
+                "y": 71
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "flagGreen.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 142,
+                "y": 40
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "flagRed.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 216,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "flagYellow.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "frozenBush.png": {
+            "frame": {
+                "h": 39,
+                "idx": 0,
+                "w": 36,
+                "x": 142,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 17,
+                "y": 31
+            }
+        },
+        "grass.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 39,
+                "y": 178
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "rock.png": {
+            "frame": {
+                "h": 35,
+                "idx": 0,
+                "w": 61,
+                "x": 39,
+                "y": 142
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 5,
+                "y": 35
+            }
+        },
+        "sand.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 71,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "snow.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 39,
+                "y": 71
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "starBronze.png": {
+            "frame": {
+                "h": 37,
+                "idx": 0,
+                "w": 38,
+                "x": 0,
+                "y": 185
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 16,
+                "y": 19
+            }
+        },
+        "starDiamond.png": {
+            "frame": {
+                "h": 37,
+                "idx": 0,
+                "w": 38,
+                "x": 0,
+                "y": 147
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 16,
+                "y": 19
+            }
+        },
+        "starGold.png": {
+            "frame": {
+                "h": 37,
+                "idx": 0,
+                "w": 38,
+                "x": 0,
+                "y": 109
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 16,
+                "y": 19
+            }
+        },
+        "starSilver.png": {
+            "frame": {
+                "h": 37,
+                "idx": 0,
+                "w": 38,
+                "x": 0,
+                "y": 71
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 16,
+                "y": 19
+            }
+        }
+    },
+    "meta": {
+        "image": "Other.png",
+        "prefix": "Other/"
+    }
+}

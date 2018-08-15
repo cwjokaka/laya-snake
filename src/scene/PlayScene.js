@@ -19,11 +19,13 @@ var PlayScene = (function(superClass) {
     var _proto = PlayScene.prototype;
 
     _proto.init = function() {
-
+        // new Laya.TiledMap()
         var self = this;
         this.state = FSM.PLAY;
 
         this.bg = new Background();
+
+        // var bgs = this.bg.tiledMap.mapSprite();
         this.heroLink = ObjectHolder.heroLink;
         this.itemBox = ObjectHolder.itemBox;
         this.enemyBox = ObjectHolder.enemyBox;
@@ -32,6 +34,7 @@ var PlayScene = (function(superClass) {
 
         // 视图层        
         this.view = new Laya.Sprite();
+        // bgs.addChild(this.view);
         this.addChild(this.view);
 
         this.view.addChild(this.bg);

@@ -1,0 +1,943 @@
+{
+    "frames": {
+        "elementGlass000.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 567,
+                "y": 851
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass001.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 140,
+                "x": 645,
+                "y": 496
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass002.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 779,
+                "y": 638
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass003.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 850,
+                "y": 709
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass004.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 140,
+                "x": 354,
+                "y": 645
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass005.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 638,
+                "y": 780
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass006.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 709,
+                "y": 780
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass007.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 140,
+                "x": 495,
+                "y": 575
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass008.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 567,
+                "y": 780
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass009.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 779,
+                "y": 709
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass010.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 140,
+                "x": 785,
+                "y": 567
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass011.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 637,
+                "y": 638
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass012.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 708,
+                "y": 638
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass013.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 140,
+                "x": 503,
+                "y": 504
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass014.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 220,
+                "x": 645,
+                "y": 425
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 220
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass015.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 850,
+                "y": 638
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass016.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 140,
+                "x": 644,
+                "y": 567
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass017.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 220,
+                "x": 645,
+                "y": 283
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 220
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass018.png": {
+            "frame": {
+                "h": 140,
+                "idx": 0,
+                "w": 70,
+                "x": 496,
+                "y": 787
+            },
+            "sourceSize": {
+                "h": 140,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass019.png": {
+            "frame": {
+                "h": 140,
+                "idx": 0,
+                "w": 140,
+                "x": 362,
+                "y": 362
+            },
+            "sourceSize": {
+                "h": 140,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass020.png": {
+            "frame": {
+                "h": 140,
+                "idx": 0,
+                "w": 220,
+                "x": 141,
+                "y": 423
+            },
+            "sourceSize": {
+                "h": 140,
+                "w": 220
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass021.png": {
+            "frame": {
+                "h": 220,
+                "idx": 0,
+                "w": 70,
+                "x": 503,
+                "y": 282
+            },
+            "sourceSize": {
+                "h": 220,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass022.png": {
+            "frame": {
+                "h": 220,
+                "idx": 0,
+                "w": 140,
+                "x": 0,
+                "y": 663
+            },
+            "sourceSize": {
+                "h": 220,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass023.png": {
+            "frame": {
+                "h": 140,
+                "idx": 0,
+                "w": 70,
+                "x": 495,
+                "y": 646
+            },
+            "sourceSize": {
+                "h": 140,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass024.png": {
+            "frame": {
+                "h": 140,
+                "idx": 0,
+                "w": 140,
+                "x": 141,
+                "y": 564
+            },
+            "sourceSize": {
+                "h": 140,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass025.png": {
+            "frame": {
+                "h": 140,
+                "idx": 0,
+                "w": 220,
+                "x": 503,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 140,
+                "w": 220
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass026.png": {
+            "frame": {
+                "h": 220,
+                "idx": 0,
+                "w": 70,
+                "x": 212,
+                "y": 705
+            },
+            "sourceSize": {
+                "h": 220,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass027.png": {
+            "frame": {
+                "h": 220,
+                "idx": 0,
+                "w": 140,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 220,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass028.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 638,
+                "y": 851
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass029.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 140,
+                "x": 786,
+                "y": 496
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass030.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 220,
+                "x": 644,
+                "y": 212
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 220
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass031.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 709,
+                "y": 851
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass032.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 140,
+                "x": 362,
+                "y": 503
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass033.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 220,
+                "x": 644,
+                "y": 141
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 220
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass034.png": {
+            "frame": {
+                "h": 140,
+                "idx": 0,
+                "w": 70,
+                "x": 425,
+                "y": 787
+            },
+            "sourceSize": {
+                "h": 140,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass035.png": {
+            "frame": {
+                "h": 140,
+                "idx": 0,
+                "w": 140,
+                "x": 503,
+                "y": 141
+            },
+            "sourceSize": {
+                "h": 140,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass036.png": {
+            "frame": {
+                "h": 140,
+                "idx": 0,
+                "w": 220,
+                "x": 141,
+                "y": 282
+            },
+            "sourceSize": {
+                "h": 140,
+                "w": 220
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass037.png": {
+            "frame": {
+                "h": 220,
+                "idx": 0,
+                "w": 70,
+                "x": 141,
+                "y": 705
+            },
+            "sourceSize": {
+                "h": 220,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass038.png": {
+            "frame": {
+                "h": 220,
+                "idx": 0,
+                "w": 140,
+                "x": 362,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 220,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass039.png": {
+            "frame": {
+                "h": 140,
+                "idx": 0,
+                "w": 70,
+                "x": 283,
+                "y": 785
+            },
+            "sourceSize": {
+                "h": 140,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass040.png": {
+            "frame": {
+                "h": 140,
+                "idx": 0,
+                "w": 140,
+                "x": 724,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 140,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass041.png": {
+            "frame": {
+                "h": 140,
+                "idx": 0,
+                "w": 220,
+                "x": 141,
+                "y": 141
+            },
+            "sourceSize": {
+                "h": 140,
+                "w": 220
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass042.png": {
+            "frame": {
+                "h": 220,
+                "idx": 0,
+                "w": 70,
+                "x": 574,
+                "y": 283
+            },
+            "sourceSize": {
+                "h": 220,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass043.png": {
+            "frame": {
+                "h": 220,
+                "idx": 0,
+                "w": 140,
+                "x": 0,
+                "y": 442
+            },
+            "sourceSize": {
+                "h": 220,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass044.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 566,
+                "y": 646
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass045.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 140,
+                "x": 354,
+                "y": 574
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass046.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 708,
+                "y": 709
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass047.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 637,
+                "y": 709
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass048.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 140,
+                "x": 354,
+                "y": 716
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass049.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 220,
+                "x": 645,
+                "y": 354
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 220
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass050.png": {
+            "frame": {
+                "h": 140,
+                "idx": 0,
+                "w": 70,
+                "x": 354,
+                "y": 787
+            },
+            "sourceSize": {
+                "h": 140,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass051.png": {
+            "frame": {
+                "h": 140,
+                "idx": 0,
+                "w": 140,
+                "x": 362,
+                "y": 221
+            },
+            "sourceSize": {
+                "h": 140,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass052.png": {
+            "frame": {
+                "h": 140,
+                "idx": 0,
+                "w": 220,
+                "x": 141,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 140,
+                "w": 220
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass053.png": {
+            "frame": {
+                "h": 220,
+                "idx": 0,
+                "w": 70,
+                "x": 283,
+                "y": 564
+            },
+            "sourceSize": {
+                "h": 220,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementGlass054.png": {
+            "frame": {
+                "h": 220,
+                "idx": 0,
+                "w": 140,
+                "x": 0,
+                "y": 221
+            },
+            "sourceSize": {
+                "h": 220,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "Glass elements.png",
+        "prefix": "Glass elements/"
+    }
+}

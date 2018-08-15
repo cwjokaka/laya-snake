@@ -1,4 +1,7 @@
 var Background = (function(superClass){
+
+    var Handler = Laya.Handler;
+
     function Background() {
         Background.super(this);
         this.init();
@@ -25,6 +28,18 @@ var Background = (function(superClass){
         for(var i=0; i<=grid_y_num; i++) {
             this.graphics.drawLine(0, i * grid_height, width, i * grid_height, grid_border_color, grid_border_width);
         } 
+
+        // this.loadImage("./res/tiledmap/background.json", 0, 0, gameConfig.node.WIDTH, gameConfig.node.HEIGHT);
+        // this.loadImage("Aliens/alienGreen_round.png", 0, 0, gameConfig.node.WIDTH, gameConfig.node.HEIGHT);
+        // this.tiledMap = new Laya.TiledMap();
+		// this.tiledMap.createMap("./res/tiledmap/background.json", new Laya.Rectangle(0, 0, gameConfig.screen.WIDTH, gameConfig.screen.HEIGHT), 
+        // Handler.create(this, function(){
+        //     var mapLayer = this.tiledMap.getLayerByName('obj');
+        //     var s = new Laya.Sprite();
+        //     s.graphics.drawCircle(100, 100, 100, '#ddd');
+        //     mapLayer.addChild(s);
+        // }));
+        
 
     }
     return Background;

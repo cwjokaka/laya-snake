@@ -1,0 +1,161 @@
+{
+    "frames": {
+        "debrisGlass_1.png": {
+            "frame": {
+                "h": 56,
+                "idx": 0,
+                "w": 64,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 56,
+                "w": 64
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "debrisGlass_2.png": {
+            "frame": {
+                "h": 61,
+                "idx": 0,
+                "w": 55,
+                "x": 130,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 61,
+                "w": 55
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "debrisGlass_3.png": {
+            "frame": {
+                "h": 52,
+                "idx": 0,
+                "w": 59,
+                "x": 56,
+                "y": 119
+            },
+            "sourceSize": {
+                "h": 52,
+                "w": 59
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "debrisStone_1.png": {
+            "frame": {
+                "h": 56,
+                "idx": 0,
+                "w": 64,
+                "x": 65,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 56,
+                "w": 64
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "debrisStone_2.png": {
+            "frame": {
+                "h": 61,
+                "idx": 0,
+                "w": 55,
+                "x": 65,
+                "y": 57
+            },
+            "sourceSize": {
+                "h": 61,
+                "w": 55
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "debrisStone_3.png": {
+            "frame": {
+                "h": 52,
+                "idx": 0,
+                "w": 59,
+                "x": 116,
+                "y": 119
+            },
+            "sourceSize": {
+                "h": 52,
+                "w": 59
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "debrisWood_1.png": {
+            "frame": {
+                "h": 56,
+                "idx": 0,
+                "w": 64,
+                "x": 0,
+                "y": 57
+            },
+            "sourceSize": {
+                "h": 56,
+                "w": 64
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "debrisWood_2.png": {
+            "frame": {
+                "h": 61,
+                "idx": 0,
+                "w": 55,
+                "x": 0,
+                "y": 114
+            },
+            "sourceSize": {
+                "h": 61,
+                "w": 55
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "debrisWood_3.png": {
+            "frame": {
+                "h": 52,
+                "idx": 0,
+                "w": 59,
+                "x": 121,
+                "y": 62
+            },
+            "sourceSize": {
+                "h": 52,
+                "w": 59
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "Debris.png",
+        "prefix": "Debris/"
+    }
+}

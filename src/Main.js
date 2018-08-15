@@ -3,9 +3,9 @@
     var stage = Laya.stage;
     var startScene = new StartScene();
     var playScene = new PlayScene();
-    
-    stage.addChild(startScene);
-    startScene.init();
+    var loadScene = new LoadScene();
+    stage.addChild(loadScene);
+    // startScene.init();
     
 
 })();

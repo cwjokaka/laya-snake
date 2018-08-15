@@ -6,13 +6,7 @@ var Hero = (function(superClass){
 
     function Hero(opts) {
         Hero.super(this);
-        this.init(opts);
-    }
-    Laya.class(Hero, 'hero', superClass);
-
-    // 初始化
-    Hero.prototype.init = function(opts) {
-        this.dir = opts.dir || gameConfig.dirs.RIGHT;
+                this.dir = opts.dir || gameConfig.dirs.RIGHT;
         // 到达目的地时进行dir = rdir
         this.rdir = gameConfig.dirs.RIGHT;
         this.curX = opts.curX || 0;
@@ -32,10 +26,21 @@ var Hero = (function(superClass){
         this.bar = new Bar({bindObj: this});
         // this.addChild(this.bar);
         ObjectHolder.barBox.addChild(this.bar);
-
         this.setBounds(new Rectangle(gameConfig.grid.PADDING, gameConfig.grid.PADDING, gameConfig.node.WIDTH - gameConfig.grid.PADDING * 2, gameConfig.node.HEIGHT - gameConfig.grid.PADDING * 2));
-        // 填充颜色
-        this.graphics.drawRect(0, 0, gameConfig.node.WIDTH, gameConfig.node.HEIGHT, opts.color || gameConfig.node.COLOR);   
+
+        this.init(opts);
+    }
+    Laya.class(Hero, 'hero', superClass);
+
+    // 初始化
+    Hero.prototype.init = function(opts) {
+        // // 填充颜色
+        // this.graphics.drawRect(0, 0, gameConfig.node.WIDTH, gameConfig.node.HEIGHT, opts.color || gameConfig.node.COLOR);  
+        //设置皮肤(取图集中小图的方式就是 原小图目录名/原小图资源名.png)
+        // img.skin = "Aliens/alienGreen_round.png";
+        // var t = Laya.loader.getRes("../../res/apes/monkey2.png");
+        this.loadImage("Aliens/alienGreen_round.png", 0, 0, gameConfig.node.WIDTH, gameConfig.node.HEIGHT);
+		// Laya.stage.addChild(ape); 
     }
 
     var _proto = Hero.prototype;

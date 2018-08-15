@@ -1,0 +1,263 @@
+{
+    "frames": {
+        "alienBeige_round.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "alienBeige_square.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 0,
+                "y": 71
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "alienBeige_suit.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 0,
+                "y": 142
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "alienBlue_round.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 0,
+                "y": 213
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "alienBlue_square.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 71,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "alienBlue_suit.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 142,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "alienGreen_round.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 213,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "alienGreen_square.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 71,
+                "y": 71
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "alienGreen_suit.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 71,
+                "y": 142
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "alienPink_round.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 71,
+                "y": 213
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "alienPink_square.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 142,
+                "y": 71
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "alienPink_suit.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 213,
+                "y": 71
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "alienYellow_round.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 142,
+                "y": 142
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "alienYellow_square.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 142,
+                "y": 213
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "alienYellow_suit.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 213,
+                "y": 142
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "Aliens.png",
+        "prefix": "Aliens/"
+    }
+}

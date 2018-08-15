@@ -1,0 +1,943 @@
+{
+    "frames": {
+        "elementWood000.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 71,
+                "y": 858
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood001.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 71,
+                "y": 787
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood002.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 140,
+                "x": 734,
+                "y": 654
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood003.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 213,
+                "y": 787
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood004.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 284,
+                "y": 787
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood005.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 140,
+                "x": 282,
+                "y": 716
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood006.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 706,
+                "y": 796
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood007.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 777,
+                "y": 796
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood008.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 140,
+                "x": 565,
+                "y": 785
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood009.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 0,
+                "y": 787
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood010.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 497,
+                "y": 856
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood011.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 140,
+                "x": 141,
+                "y": 716
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood012.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 220,
+                "x": 221,
+                "y": 503
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 220
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood013.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 568,
+                "y": 856
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood014.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 140,
+                "x": 0,
+                "y": 716
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood015.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 220,
+                "x": 0,
+                "y": 503
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 220
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood016.png": {
+            "frame": {
+                "h": 140,
+                "idx": 0,
+                "w": 70,
+                "x": 494,
+                "y": 715
+            },
+            "sourceSize": {
+                "h": 140,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood017.png": {
+            "frame": {
+                "h": 140,
+                "idx": 0,
+                "w": 140,
+                "x": 423,
+                "y": 362
+            },
+            "sourceSize": {
+                "h": 140,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood018.png": {
+            "frame": {
+                "h": 140,
+                "idx": 0,
+                "w": 220,
+                "x": 362,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 140,
+                "w": 220
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood019.png": {
+            "frame": {
+                "h": 220,
+                "idx": 0,
+                "w": 70,
+                "x": 785,
+                "y": 362
+            },
+            "sourceSize": {
+                "h": 220,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood020.png": {
+            "frame": {
+                "h": 220,
+                "idx": 0,
+                "w": 140,
+                "x": 141,
+                "y": 141
+            },
+            "sourceSize": {
+                "h": 220,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood021.png": {
+            "frame": {
+                "h": 140,
+                "idx": 0,
+                "w": 70,
+                "x": 423,
+                "y": 715
+            },
+            "sourceSize": {
+                "h": 140,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood022.png": {
+            "frame": {
+                "h": 140,
+                "idx": 0,
+                "w": 140,
+                "x": 0,
+                "y": 221
+            },
+            "sourceSize": {
+                "h": 140,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood023.png": {
+            "frame": {
+                "h": 140,
+                "idx": 0,
+                "w": 220,
+                "x": 564,
+                "y": 141
+            },
+            "sourceSize": {
+                "h": 140,
+                "w": 220
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood024.png": {
+            "frame": {
+                "h": 220,
+                "idx": 0,
+                "w": 70,
+                "x": 856,
+                "y": 362
+            },
+            "sourceSize": {
+                "h": 220,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood025.png": {
+            "frame": {
+                "h": 220,
+                "idx": 0,
+                "w": 140,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 220,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood026.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 0,
+                "y": 858
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood027.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 140,
+                "x": 777,
+                "y": 583
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood028.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 220,
+                "x": 0,
+                "y": 574
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 220
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood029.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 142,
+                "y": 858
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood030.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 140,
+                "x": 734,
+                "y": 725
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood031.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 220,
+                "x": 442,
+                "y": 644
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 220
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood032.png": {
+            "frame": {
+                "h": 140,
+                "idx": 0,
+                "w": 70,
+                "x": 804,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 140,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood033.png": {
+            "frame": {
+                "h": 140,
+                "idx": 0,
+                "w": 140,
+                "x": 0,
+                "y": 362
+            },
+            "sourceSize": {
+                "h": 140,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood034.png": {
+            "frame": {
+                "h": 140,
+                "idx": 0,
+                "w": 220,
+                "x": 141,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 140,
+                "w": 220
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood035.png": {
+            "frame": {
+                "h": 220,
+                "idx": 0,
+                "w": 70,
+                "x": 564,
+                "y": 423
+            },
+            "sourceSize": {
+                "h": 220,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood036.png": {
+            "frame": {
+                "h": 220,
+                "idx": 0,
+                "w": 140,
+                "x": 423,
+                "y": 141
+            },
+            "sourceSize": {
+                "h": 220,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood037.png": {
+            "frame": {
+                "h": 140,
+                "idx": 0,
+                "w": 70,
+                "x": 442,
+                "y": 503
+            },
+            "sourceSize": {
+                "h": 140,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood038.png": {
+            "frame": {
+                "h": 140,
+                "idx": 0,
+                "w": 140,
+                "x": 282,
+                "y": 362
+            },
+            "sourceSize": {
+                "h": 140,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood039.png": {
+            "frame": {
+                "h": 140,
+                "idx": 0,
+                "w": 220,
+                "x": 583,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 140,
+                "w": 220
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood040.png": {
+            "frame": {
+                "h": 220,
+                "idx": 0,
+                "w": 70,
+                "x": 635,
+                "y": 423
+            },
+            "sourceSize": {
+                "h": 220,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood041.png": {
+            "frame": {
+                "h": 220,
+                "idx": 0,
+                "w": 140,
+                "x": 282,
+                "y": 141
+            },
+            "sourceSize": {
+                "h": 220,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood042.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 426,
+                "y": 856
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood043.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 140,
+                "x": 0,
+                "y": 645
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood044.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 355,
+                "y": 856
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood045.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 848,
+                "y": 796
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood046.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 140,
+                "x": 141,
+                "y": 645
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood047.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 220,
+                "x": 221,
+                "y": 574
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 220
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood048.png": {
+            "frame": {
+                "h": 140,
+                "idx": 0,
+                "w": 70,
+                "x": 663,
+                "y": 644
+            },
+            "sourceSize": {
+                "h": 140,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood049.png": {
+            "frame": {
+                "h": 140,
+                "idx": 0,
+                "w": 140,
+                "x": 141,
+                "y": 362
+            },
+            "sourceSize": {
+                "h": 140,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood050.png": {
+            "frame": {
+                "h": 140,
+                "idx": 0,
+                "w": 220,
+                "x": 564,
+                "y": 282
+            },
+            "sourceSize": {
+                "h": 140,
+                "w": 220
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood051.png": {
+            "frame": {
+                "h": 220,
+                "idx": 0,
+                "w": 70,
+                "x": 706,
+                "y": 423
+            },
+            "sourceSize": {
+                "h": 220,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood052.png": {
+            "frame": {
+                "h": 220,
+                "idx": 0,
+                "w": 140,
+                "x": 785,
+                "y": 141
+            },
+            "sourceSize": {
+                "h": 220,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood053.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 70,
+                "x": 142,
+                "y": 787
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 70
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "elementWood054.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 140,
+                "x": 282,
+                "y": 645
+            },
+            "sourceSize": {
+                "h": 70,
+                "w": 140
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "Wood elements.png",
+        "prefix": "Wood elements/"
+    }
+}
