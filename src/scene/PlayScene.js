@@ -133,6 +133,11 @@ var PlayScene = (function(superClass) {
             }
         }
 
+        // 英雄行动
+        for (var i=0; i<this.heroLink.numChildren; i++) {
+            this.heroLink.getChildAt(i).action();
+        }
+
         // 敌人攻击
         for (var i=0; i<this.enemyBox.numChildren; i++) {
             this.enemyBox.getChildAt(i).attack();

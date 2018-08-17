@@ -28,37 +28,43 @@ var LoadScene = (function(superClass) {
 		progressBar.sizeGrid = "5,5,5,5";
 		progressBar.changeHandler = new Handler(this, onChange);
 		Laya.stage.addChild(progressBar);
-		Laya.timer.loop(100, this, changeValue);
+		// Laya.timer.loop(100, this, changeValue);
 		startLoad();
-	}
-
-	/**
-	 * 每一样资源加载完成后回调
-	 */
-	function onLoaded() {
-		console.log('加载完成,进入游戏');
-		Laya.stage.removeChild(progressBar);
-		Laya.stage.addChild(new StartScene());
 	}
 
 	/**
 	 * 开始正式加载资源
 	 */
 	function startLoad() {
-		Laya.loader.load("./res/atlas/Aliens.atlas", Handler.create(this, onLoaded));
+		Laya.loader.load([
+			"./res/atlas/Aliens.atlas",
+			"./res/atlas/Debris.atlas",
+			"./res/atlas/Other.atlas",
+			"./res/atlas/Glass elements.atlas",
+			"./res/atlas/Stone elements.atlas",
+			"./res/atlas/Wood elements.atlas"
+			], 
+		Handler.create(this, onAllLoaded),
+		Handler.create(this, onPerLoaded, null, false)
+		);
 	}
 
-	function changeValue(){
-
-		if (progressBar.value >= 1)
-			progressBar.value = 0;
-		progressBar.value += 0.05;
+	/**
+	 * 资源全部加载完成后回调
+	 */
+	function onAllLoaded() {
+		console.log('加载完成,进入游戏');
+		Laya.stage.removeChild(progressBar);
+		Laya.stage.addChild(new StartScene());
 	}
 
-	function onChange(value){
-		// console.log("进度：" + Math.floor(value * 100) + "%");
+	/**
+	 * 每个资源加载完成后回调
+	 */
+	function onPerLoaded(percent) {
+		progressBar.value = percent;
+		console.log('当前进度:' + percent);
 	}
-
 
     return LoadScene;
 

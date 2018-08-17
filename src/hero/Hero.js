@@ -45,9 +45,9 @@ var Hero = (function(superClass){
 
     var _proto = Hero.prototype;
 
-    // 攻击
-    _proto.attack = function() {
-        console.log('Hero攻击!');
+    // 行动
+    _proto.action = function() {
+        // console.log('Hero攻击!');
     }
     // 移动
     _proto.move = function() {

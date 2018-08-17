@@ -2,6 +2,7 @@
 * name;
 */
 var Archer = (function (superClass) {
+
     function Archer(opts) {
         opts.color = 'red';
         superClass.call(this, opts);
@@ -10,7 +11,7 @@ var Archer = (function (superClass) {
     Laya.class(Archer, 'archer', superClass);
 
     var _proto = Archer.prototype;
-        // 初始化
+    // 初始化
    _proto.init = function(opts) {
         // // 填充颜色
         // this.graphics.drawRect(0, 0, gameConfig.node.WIDTH, gameConfig.node.HEIGHT, opts.color || gameConfig.node.COLOR);  
@@ -21,6 +22,14 @@ var Archer = (function (superClass) {
         this.loadImage("Aliens/alienPink_round.png", 0, 0, gameConfig.node.WIDTH, gameConfig.node.HEIGHT);
 		// Laya.stage.addChild(ape); 
     }
+
+    // 行动
+    _proto.action = function() {
+        for(var i=0; i<ObjectHolder.enemyBox.numChildren; i++) {
+            console.log('Archer攻击!', this.globalToLocal());
+        }
+    }
+
 
 
     return Archer;
