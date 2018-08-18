@@ -19,6 +19,6 @@ var StartUI=(function(_super){
 
 		}
 
-		StartUI.uiView={"type":"View","props":{"width":600,"height":400},"child":[{"type":"Button","props":{"y":169,"x":222,"width":167,"var":"startBtn","skin":"comp/button.png","label":"开始游戏","height":60}}]};
+		StartUI.uiView={"type":"View","props":{"width":1024,"height":768},"child":[{"type":"Button","props":{"y":384,"x":512,"width":200,"var":"startBtn","skin":"comp/button.png","pivotY":50,"pivotX":100,"labelSize":30,"label":"开始游戏","height":100}}]};
 		return StartUI;
 	})(View);

@@ -26,7 +26,7 @@ var LoadScene = (function(superClass) {
 		progressBar.x = (Laya.stage.width - progressBar.width) / 2;
 		progressBar.y = Laya.stage.height / 2;
 		progressBar.sizeGrid = "5,5,5,5";
-		progressBar.changeHandler = new Handler(this, onChange);
+		// progressBar.changeHandler = new Handler(this, onChange);
 		Laya.stage.addChild(progressBar);
 		// Laya.timer.loop(100, this, changeValue);
 		startLoad();

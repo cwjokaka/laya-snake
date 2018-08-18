@@ -1,3 +1,12 @@
+var HeroState = {
+    // 准备中
+    PREPARE: 0,
+    // 可行动   
+    ACTIONABLE: 1,
+    // 晕眩
+    STUN: 2
+
+};
 var Hero = (function(superClass){
 
     var Handler = Laya.Handler;
@@ -6,7 +15,12 @@ var Hero = (function(superClass){
 
     function Hero(opts) {
         Hero.super(this);
-                this.dir = opts.dir || gameConfig.dirs.RIGHT;
+        this.dir = opts.dir || gameConfig.dirs.RIGHT;
+        this.range = opts.range || 100;
+
+        // 初始状态
+        this.state = opts.state || HeroState.PREPARE;
+        
         // 到达目的地时进行dir = rdir
         this.rdir = gameConfig.dirs.RIGHT;
         this.curX = opts.curX || 0;
@@ -88,7 +102,8 @@ var Hero = (function(superClass){
                     break;
             }
             // console.log('首节点移动target: x' +this.tarPos.x+ ' y'+this.tarPos.y);
-            this.moveTween = Laya.Tween.to(this, {x: this.tarX, y: this.tarY}, 300, Ease.linearIn, Handler.create(this, this.move), 0, true);
+            this.moveTween = Laya.Tween.to(this, {x: this.tarX, y: this.tarY}, 300, Ease.linearIn, Handler.create(this, this.move), -1, true, true);
+
         }        
 
     }
@@ -161,3 +176,4 @@ var Hero = (function(superClass){
     return Hero;
 
 }(Laya.Sprite));
+

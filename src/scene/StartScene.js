@@ -1,3 +1,6 @@
+/**
+ * 开始页面
+ */
 var StartScene = (function(superClass) {
 
 
@@ -35,22 +38,21 @@ var StartScene = (function(superClass) {
 		Laya.stage.alignH = Stage.ALIGN_CENTER;
         
 
-        var button = new laya.ui.Button(null, '开始游戏');
-
-        this.addChild(button);
-        button.pos(Laya.stage.width / 2, Laya.stage.height / 2);
-        button.width = 200;
-        button.height = 100;
-        button.pivot(100, 50);
-        button.labelStroke = 1;
-        button.labelSize = 32;
-        button.strokeColors = 'green,green,green,green';
-        button.clickHandler = Handler.create(button, function(){
-            ObjectHolder.init();
-            var playScene = new PlayScene() 
-            stage.replaceChild(playScene, self);
-            playScene.init();
-        });
+        // var button = new laya.ui.Button(null, '开始游戏');
+        // this.addChild(button);
+        // button.pos(Laya.stage.width / 2, Laya.stage.height / 2);
+        // button.width = 200;
+        // button.height = 100;
+        // button.pivot(100, 50);
+        // button.labelStroke = 1;
+        // button.labelSize = 32;
+        // button.strokeColors = 'green,green,green,green';
+        // button.clickHandler = Handler.create(button, function(){
+        //     ObjectHolder.init();
+        //     var playScene = new PlayScene() 
+        //     stage.replaceChild(playScene, self);
+        //     playScene.init();
+        // });
         
 
     }

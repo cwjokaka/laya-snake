@@ -46,7 +46,7 @@ var PlayScene = (function(superClass) {
         // this.addChild(button);
 
         this.joyStick = new JoyStick();
-        this.joyStick.pos(180, 650);
+        this.joyStick.pos(180, 500);
         this.addChild(this.joyStick);
 
         // 摄像机

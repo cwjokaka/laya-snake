@@ -25,8 +25,24 @@ var Archer = (function (superClass) {
 
     // 行动
     _proto.action = function() {
-        for(var i=0; i<ObjectHolder.enemyBox.numChildren; i++) {
-            console.log('Archer攻击!', this.globalToLocal());
+        switch(this.state) {
+            case HeroState.PREPARE:
+                console.log('Archer准备中');
+                
+                break;
+            case HeroState.ACTIONABLE:
+                console.log('Archer可行动');
+                for(var i=0; i<ObjectHolder.enemyBox.numChildren; i++) {
+                    console.log('Archer攻击!');
+                    var enemy = ObjectHolder.enemyBox.getChildAt(i);
+                    var deltaX = this.x - enemy.x;
+                    var deltaY = this.y - enemy.y;
+                    var distance = Math.sqrt(Math.pow(deltaX, 2) + Math.pow(deltaY, 2));
+                    if(distance <= this.range) {
+                        console.log('进入Archer攻击范围!射子弹');
+                    }
+                }
+                break;
         }
     }
 
